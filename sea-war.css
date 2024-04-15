@@ -1,0 +1,178 @@
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+    background: rgb(175, 57, 255);
+    background: linear-gradient(90deg, rgba(175, 57, 255, 1) 0%, rgba(55, 200, 255, 1) 50%, rgba(255, 252, 33, 1) 100%);
+}
+
+#gameArea {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 15px;
+}
+
+#gameArea .pcGameArea,
+#gameArea .userGameArea {
+    width: 50%;
+    float: left;
+    margin: 0 0 15px 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#gameArea .gameField {
+    margin: 5px 15px 0 0;
+    display: block;
+    padding: 0;
+}
+
+#gameArea .gameField div {
+    margin: -1px;
+    display: block;
+    position: relative;
+    float: left;
+    background-color: #fcfcfc;
+    border: 1px solid #a7ddf5;
+    text-align: center;
+    color: #f44336;
+}
+
+#gameArea .gameField div .badge {
+    font-size: 2em;
+    color: #f44336;
+}
+
+#gameArea .gameField .ship {
+    background-color: #7bc4ff;
+}
+
+#gameArea .btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #dcff41;
+    white-space: nowrap;
+    padding: 6px 12px;
+    line-height: 1.4;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 1.2em;
+    background-color: #dcff41;
+    transition: background-color 0.3s; 
+}
+
+#gameArea .btn:hover {
+    background-color: gold;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    color: #18191f;
+    text-decoration: none;
+}
+
+.menu ul li {
+    margin-right: 10px;
+    position: relative;
+    color: #18191f;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu ul li::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.menu ul li:hover::after {
+    width: 100%;
+}
+
+.menu ul li:hover {
+    color: #8C30F5;
+}
+
+.menu ul li:hover ul {
+    display: block;
+}
+
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.menu ul li ul li {
+    margin-right: 0;
+    white-space: nowrap;
+}
+
+.menu ul li ul li ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul li ul li:hover ul {
+    display: block;
+}
+
+.menu ul li ul:not(:hover) li ul {
+    display: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+}

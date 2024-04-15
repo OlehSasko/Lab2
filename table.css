@@ -1,0 +1,228 @@
+body {
+    background: rgb(175, 57, 255);
+    background: linear-gradient(90deg, rgba(175, 57, 255, 1) 0%, rgba(55, 200, 255, 1) 50%, rgba(255, 252, 33, 1) 100%);
+}
+
+.container_menu {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu ul li {
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    border-bottom: none;
+    transition: color 0.3s;
+}
+
+.menu ul li::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+    margin: 0 auto;
+}
+
+.menu ul li:hover::after {
+    width: 100%;
+}
+
+.menu ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #8C30F5;
+    cursor: pointer;
+}
+
+.menu ul li:hover ul {
+    display: block;
+}
+
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul li ul ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul ul {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.menu ul li:hover > ul,
+.menu ul ul:hover > ul {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+  
+.menu ul li ul li {
+    margin-right: 0;
+    white-space: nowrap;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    border-bottom: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu ul li {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    table {
+        width: auto;
+    }
+    td, th {
+        white-space: nowrap;
+        min-width: 100px;
+    }
+}
+
+.container {
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    overflow-x: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content table tbody tr,td:first-child {
+    text-align: left;
+}
+
+th {
+    color: white;
+}
+
+.plan {
+    background-color: #9e9ac2;
+    font-weight: bold;
+}
+
+.starter {
+    background-color: #8681b3;
+    font-weight: bold;
+}
+
+.econom {
+    background-color: #6963a1;
+    font-weight: bold;
+}
+
+.standart {
+    background-color: #4f4891;
+    font-weight: bold;
+}
+
+.professional {
+    background-color: #3d3585;
+    font-weight: bold;
+}
+
+.support {
+    color: #3d3785;
+    font-weight: bold;
+}
+  
+button {
+    width: 100px;
+    padding: 10px 20px;
+    background-color: #eeeeee;
+    border: 2px solid #cecece;
+    border-radius: 4px;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, cursor 0.3s;
+}
+
+button:hover {
+    background-color: #cecece;
+    color: #000;
+    border-color: #000;
+    cursor: pointer;
+}
+
+tbody td:nth-child(odd) {
+    background-color:rgba(213, 209, 209, 0.5)
+}
+
+tbody tr:nth-child(even) {
+    background-color:rgba(204, 204, 204, 0.5)
+}
+
+tbody tr:hover {
+    background-color: rgb(255, 29, 191);
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    border-bottom: none;
+}
